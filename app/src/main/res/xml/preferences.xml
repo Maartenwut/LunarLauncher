@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pref_header_general">
+
+        <ListPreference
+            android:defaultValue="showIcons"
+            android:entries="@array/iconOptions"
+            android:entryValues="@array/iconOptionsValues"
+            android:key="iconOptions"
+            android:title="@string/iconOptionsTitle" />
+        <MultiSelectListPreference
+            android:key="hideApps"
+            android:title="@string/hideAppsPreferenceTitle"
+            android:summary="@string/hideAppsPreferenceSummary" />
+
+        <ListPreference
+            android:key="favoriteAppsOrder"
+            android:defaultValue="default"
+            android:entries="@array/favoritesOrder"
+            android:entryValues="@array/favoritesOrderValues"
+            android:title="@string/favoritesOrderTitle" />
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="fastScrolling"
+            android:title="@string/fastScrollingPreferenceTitle" />
+        <Preference
+            android:title="Set wallpaper"
+            android:key="setWallpaper"/>
+
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_header_colors">
+        <Preference
+            android:title="@string/backgroundColorPreferenceTitle"
+            android:summary="@string/backgroundColorPreferenceSummary"
+            android:key="backgroundColor"/>
+        <Preference
+            android:title="@string/textColorPreferenceTitle"
+            android:summary="@string/textColorPreferenceSummary"
+            android:key="textColor" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_header_about">
+        <Preference
+            android:title="@string/contactDeveloperTitle"
+            android:summary="@string/contactDeveloperSummary">
+        <intent android:action="android.intent.action.VIEW"
+            android:data="mailto:me@maartendekkers.com"/>
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
